@@ -1,0 +1,200 @@
+/* Importing font */
+@font-face {
+    font-family: Montserrat;
+    src: url("assets/fonts/Montserrat-Regular.ttf");
+    font-weight: normal;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(to right, #3a5be6, #4116bc);
+    font-family: "Montserrat", sans-serif;
+}
+.topbar {
+    background: transparent;
+    padding: 1.5rem 2rem;
+    transition: background 0.3s ease-in;
+}
+#bodyoverlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    display: none; /* initially hidden */
+    z-index: 1031; /* one index greater than .fixed-top class */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color 0.4s ease-in-out;
+    min-width: 100%;
+    min-height: 100%;
+}
+#mobilenav {
+    position: fixed;
+    top: 0;
+    right: -75%;
+    min-height: 100%;
+    width: 70%;
+    transition: right 0.4s ease-in-out;
+    z-index: 1032; /* one index greater than the #bodyoverlay */
+}
+.menu-icon {
+    font-size: 1.5rem;
+}
+.home {
+    padding: 20vh 0 40vh;
+    background-image: linear-gradient(to right, rgba(58, 91, 230, 0.9), rgba(65, 22, 188, 0.9)),
+    url("images/church_svg1.svg");
+    height: 100vh;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: padding-box;
+}
+
+/* Get Started buttons */
+.get-started-btn {
+    background-color: #fe7251;
+    border-radius: 2.25rem;
+}
+.get-started-btn-lg {
+    padding: 1rem 4.5rem;
+}
+.get-started-btn:focus, .get-started-btn:hover {
+    box-shadow: 0 .7rem .7rem rgba(0, 0, 0, 0.3);
+    background-color: #383838;
+}
+.btn:focus, .btn:active {
+    box-shadow: none;
+}
+.topbar a {
+    color: white;
+}
+.topbar a:hover, .topbar a:focus {
+    color: #fe7251;
+}
+.main-features-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch; /* for smooth horizontal scrolling */
+}
+.main-feature-card {
+	flex: 0 0 auto;
+}
+.email-section p > a, 
+footer a.terms-and-conditions-btn {
+    color: white;
+    text-decoration: underline;
+}
+.email-section p > a:hover, 
+.email-section p > a:focus,
+footer a.terms-and-conditions-btn:hover,
+footer a.terms-and-conditions-btn:focus {
+    color: #fe7251;
+    text-decoration: underline;
+}
+.overlapping-header-picture {
+    margin: -20% auto 120px;
+}
+.major-features-section {
+    padding-bottom: 120px;
+}
+svg {
+    opacity: 0.3; /* setting opacity for all svg element */
+}
+.first-svg {
+    right: 0;
+}
+.card {
+    border: none; /* Removing the borders from the cards */
+}
+.email-section {
+    padding: 30px 0;
+    overflow-y: visible;
+}
+.email-section input[type="email"] {
+    border-radius: 2.25rem;
+    font-size: 1rem;
+    border: none;
+}
+.email-section input[type="email"]:focus {
+    box-shadow: 0 0 0.1rem 0.2rem rgba(254, 114, 81, 0.7);
+}
+.email-section-picture img {
+    transform: scale(1.3, 1.3);
+}
+.second-svg {
+    left: 0;
+}
+.features-heading {
+    padding: 120px 0 50px;
+}
+.feature-row {
+    margin-bottom: 200px;
+}
+.third-svg {
+    top: 25%;
+    right: 0;
+}
+.fourth-svg {
+    top: 28%;
+    left: 0;
+}
+.testimonials-section {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url("images/church_svg2.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: padding-box;
+    margin-top: 120px;
+    padding: 0 0 200px;
+}
+.testimonials-section p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+.testimonials-section .carousel-indicators {
+    bottom: -80px;
+}
+.testimonials-section .carousel-indicators li {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: silver;
+}
+.testimonials-section .carousel-indicators .active {
+    background-color: #3a5be6;
+}
+footer {
+    background: linear-gradient(to right, rgba(58, 91, 230, 0.9), rgba(65, 22, 188, 0.9)),
+    url("images/church_svg1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: padding-box;
+    padding: 40px 0 15px;
+    margin-top: 60px;
+}
+.footer-bottom {
+    margin-top: 60px;
+}
+footer .go-to-top {
+    right: 40px;
+    bottom: 20px;
+}
+
+
+/* media queries */
+@media screen and (max-width: 991.98px) {
+    .overlapping-header-picture {
+        margin-top: -30%;
+    }
+    .feature-row {
+        margin-bottom: 120px;
+    }
+}
